@@ -1,4 +1,4 @@
-#include "widget.h"
+﻿#include "widget.h"
 #include "ui_widget.h"
 
 #include <QTime>
@@ -63,6 +63,7 @@ Widget::Widget(QWidget* parent)
 
 Widget::~Widget()
 {
+    QDir(_homeTmpPath).removeRecursively();
     delete ui;
 }
 
@@ -120,7 +121,7 @@ void Widget::printInfoForUpdatingMainApp()
 void Widget::abortUpdateMainApp()
 {
     ui->progressBar->hide();
-    ui->mainAppTextEdit->insertPlainText(QString(tr("===== ABORTED UPDATE!!! =====")) + QString("\n"));
+    ui->mainAppTextEdit->insertPlainText(QString(tr("=== ABORTED UPDATE!!! ===")) + QString("\n"));
     ui->messageLabel->setText(QString(tr("Aborted!")));
     blockControls(false);
 }
@@ -128,7 +129,7 @@ void Widget::abortUpdateMainApp()
 void Widget::abortUpdateOsComponentsApp()
 {
     ui->progressBar->hide();
-    ui->osComponentsTextEdit->insertPlainText(QString(tr("===== ABORTED UPDATE!!! =====")) + QString("\n"));
+    ui->osComponentsTextEdit->insertPlainText(QString(tr("=== ABORTED UPDATE!!! ===")) + QString("\n"));
     ui->messageLabel->setText(QString(tr("Aborted!")));
     blockControls(false);
 }
@@ -170,12 +171,14 @@ bool Widget::checkCurrentVersion()
         if (list.isEmpty() == false) {
             _currentMainAppVersion = list.first();
             ui->currentVersionLineEdit->setText(_currentMainAppVersion);
+            ui->createBackUpButton->setEnabled(true);
             return true;
         }
     }
     else {
         ui->mainAppTextEdit->insertPlainText(QString(tr("Application Avicon-31 not found!")) + QString("\n"));
     }
+    ui->createBackUpButton->setEnabled(false);
     return false;
 }
 
@@ -305,30 +308,21 @@ bool Widget::updateMainApplication()
     ui->mainAppTextEdit->insertPlainText(QString(tr("Updating files ... ")) + QString("\n"));
     delay(100);
     bool res = false;
-    QFile file(_homeTmpPath + QString("/") + PROGRAM_NAME);
-    if (file.exists()) {
-        bool res1 = QDir().mkdir(TMP_PROGRAM_DIR);
-        sync();
-        QDir dir(TMP_PROGRAM_DIR);
-        QFileInfo fileInfo(PROGRAM_DIR, PROGRAM_NAME);
-        QString sourcePath = fileInfo.absoluteFilePath();
-        QString destinationPath = dir.absolutePath() + QString("/") + fileInfo.fileName();
+    if (QFile(_homeTmpPath + QString("/") + PROGRAM_NAME).exists()) {
+        QString sourcePath = PROGRAM_DIR + "/" + PROGRAM_NAME;
+        bool res1 = true;
+        if (QFile(sourcePath).exists()) {
+            res1 = QFile::remove(sourcePath);
+            sync();
+        }
+        sourcePath = _homeTmpPath + "/" + PROGRAM_NAME;
+        QString destinationPath = PROGRAM_DIR + "/" + PROGRAM_NAME;
         bool res2 = QFile::copy(sourcePath, destinationPath);
         sync();
-        bool res3 = QDir(PROGRAM_DIR).remove(PROGRAM_DIR + QString("/") + PROGRAM_NAME);
-        sync();
-        QFileInfo fileInfoNewVersion(_homeTmpPath, PROGRAM_NAME);
-        sourcePath = fileInfoNewVersion.absoluteFilePath();
-        destinationPath = PROGRAM_DIR + QString("/") + fileInfoNewVersion.fileName();
-        bool res4 = QFile::copy(sourcePath, destinationPath);
-        sync();
-        bool res5 = dir.removeRecursively();
-        sync();
-        res = res1 && res2 && res3 && res4 && res5;
+        res = res1 && res2;
     }
 
     res ? ui->mainAppTextEdit->insertPlainText(QString(tr("Success.")) + QString("\n")) : ui->mainAppTextEdit->insertPlainText(QString(tr("Failure!")) + QString("\n"));
-
     return res;
 }
 
@@ -418,9 +412,7 @@ bool Widget::checkIsUsbFlashMount()
     return res;
 }
 
-bool Widget::checkUMUFlashFirmware()
-{
-}
+bool Widget::checkUMUFlashFirmware() {}
 
 void Widget::delay(int msToWait)
 {
@@ -621,7 +613,7 @@ void Widget::on_updateMainAppButton_released()
     ui->currentVersionLineEdit->clear();
     resetProgressBar();
     ui->messageLabel->setText(QString(tr("Updating ...")));
-    ui->mainAppTextEdit->insertPlainText(QString(tr("===== START UPDATE =====")) + QString("\n"));
+    ui->mainAppTextEdit->insertPlainText(QString(tr("=== START UPDATE ===")) + QString("\n"));
     delay(100);
     progress(1);
     delay(100);
@@ -678,7 +670,7 @@ void Widget::on_updateMainAppButton_released()
     delay(1000);
     progress(10);
     delay(1000);
-    ui->mainAppTextEdit->insertPlainText(QString(tr("===== FINISH UPDATE =====")) + QString("\n"));
+    ui->mainAppTextEdit->insertPlainText(QString(tr("=== FINISH UPDATE ===")) + QString("\n"));
     ui->progressBar->hide();
     ui->messageLabel->setText(QString(tr("Updated.")));
     blockControls(false);
@@ -691,7 +683,7 @@ void Widget::on_createBackUpButton_released()
     ui->mainAppTextEdit->clear();
     resetProgressBar();
     ui->messageLabel->setText(QString(tr("Creating backup ...")));
-    ui->mainAppTextEdit->insertPlainText(QString(tr("===== START CREATING BACKUP =====")) + QString("\n"));
+    ui->mainAppTextEdit->insertPlainText(QString(tr("=== START CREATING BACKUP ===")) + QString("\n"));
     delay(100);
     progress(1);
     ui->mainAppTextEdit->insertPlainText(QString(tr("Searching current backup ...")) + QString("\n"));
@@ -700,7 +692,7 @@ void Widget::on_createBackUpButton_released()
     if (checkBackUpVersion()) {
         ui->mainAppTextEdit->insertPlainText(QString(tr("Found.")) + QString("\n"));
         if (deletePreviousBackUp() == false) {
-            ui->mainAppTextEdit->insertPlainText(QString(tr("===== ABORTED CREATING BACKUP!!! =====")) + QString("\n"));
+            ui->mainAppTextEdit->insertPlainText(QString(tr("=== ABORTED CREATING BACKUP!!! ===")) + QString("\n"));
             blockControls(false);
             return;
         }
@@ -711,7 +703,7 @@ void Widget::on_createBackUpButton_released()
     delay(100);
     progress(3);
     if (createBackUp() == false) {
-        ui->mainAppTextEdit->insertPlainText(QString(tr("===== ABORTED CREATING BACKUP!!! =====")) + QString("\n"));
+        ui->mainAppTextEdit->insertPlainText(QString(tr("=== ABORTED CREATING BACKUP!!! ===")) + QString("\n"));
         blockControls(false);
         return;
     }
@@ -722,7 +714,7 @@ void Widget::on_createBackUpButton_released()
     delay(1000);
     progress(10);
     delay(1000);
-    ui->mainAppTextEdit->insertPlainText(QString(tr("===== FINISH CREATING BACKUP =====")) + QString("\n"));
+    ui->mainAppTextEdit->insertPlainText(QString(tr("=== FINISH CREATING BACKUP ===")) + QString("\n"));
     ui->progressBar->hide();
     ui->messageLabel->setText(QString(tr("Backup was created.")));
     blockControls(false);
@@ -735,7 +727,7 @@ void Widget::on_restoreBackUpButton_released()
     ui->mainAppTextEdit->clear();
     resetProgressBar();
     ui->messageLabel->setText(QString(tr("Restoring ...")));
-    ui->mainAppTextEdit->insertPlainText(QString(tr("===== START RESTORING =====")) + QString("\n"));
+    ui->mainAppTextEdit->insertPlainText(QString(tr("=== START RESTORING ===")) + QString("\n"));
     delay(100);
     progress(1);
     ui->mainAppTextEdit->insertPlainText(QString(tr("Checking BACKUP file ...")) + QString("\n"));
@@ -747,7 +739,7 @@ void Widget::on_restoreBackUpButton_released()
     }
     else {
         ui->mainAppTextEdit->insertPlainText(QString(tr("Not found.")) + QString("\n"));
-        ui->mainAppTextEdit->insertPlainText(QString(tr("===== ABORTED RESTORING!!! =====")) + QString("\n"));
+        ui->mainAppTextEdit->insertPlainText(QString(tr("=== ABORTED RESTORING!!! ===")) + QString("\n"));
         blockControls(false);
         return;
     }
@@ -757,7 +749,7 @@ void Widget::on_restoreBackUpButton_released()
     progress(6);
     delay(100);
     if (restoreFromBackUp() == false) {
-        ui->mainAppTextEdit->insertPlainText(QString(tr("===== ABORTED RESTORING!!! =====")) + QString("\n"));
+        ui->mainAppTextEdit->insertPlainText(QString(tr("=== ABORTED RESTORING!!! ===")) + QString("\n"));
         blockControls(false);
         return;
     }
@@ -767,7 +759,7 @@ void Widget::on_restoreBackUpButton_released()
     delay(1000);
     progress(10);
     delay(1000);
-    ui->mainAppTextEdit->insertPlainText(QString(tr("===== FINISH RESTORING =====")) + QString("\n"));
+    ui->mainAppTextEdit->insertPlainText(QString(tr("=== FINISH RESTORING ===")) + QString("\n"));
     ui->progressBar->hide();
     ui->messageLabel->setText(QString(tr("Restored.")));
     blockControls(false);
@@ -826,7 +818,7 @@ void Widget::on_updateOsButton_released()
     ui->osComponentsTextEdit->clear();
     resetProgressBar();
     ui->messageLabel->setText(QString(tr("Updating ...")));
-    ui->osComponentsTextEdit->insertPlainText(QString(tr("===== START UPDATE =====")) + QString("\n"));
+    ui->osComponentsTextEdit->insertPlainText(QString(tr("=== START UPDATE ===")) + QString("\n"));
     delay(100);
     progress(1);
     delay(100);
@@ -850,7 +842,7 @@ void Widget::on_updateOsButton_released()
     progress(9);
     progress(10);
     sync();
-    ui->osComponentsTextEdit->insertPlainText(QString(tr("===== FINISH UPDATE =====")) + QString("\n"));
+    ui->osComponentsTextEdit->insertPlainText(QString(tr("=== FINISH UPDATE ===")) + QString("\n"));
     ui->progressBar->hide();
     ui->messageLabel->setText(QString(tr("Updated.")));
     blockControls(false);
@@ -1267,10 +1259,13 @@ void Widget::on_restoreSettingsButton_released()
     ui->progressBar->setValue(13);
     QDir oldBackupDirectory("/tmp/settings-backup");
     oldBackupDirectory.removeRecursively();
-
     ui->progressBar->setValue(15);
     sync();
-    QFile::copy(_flashDirPath + "/Settings.backup", "/tmp/Settings.zip");
+    if (QFile("/tmp/Settings.zip").exists() == false) {
+        ui->settingsLogTextEdit->appendPlainText(tr("Error! Settings not found!"));
+        ui->progressBar->hide();
+        return;
+    }
     sync();
     ui->progressBar->setValue(20);
 

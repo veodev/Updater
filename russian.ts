@@ -193,7 +193,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="widget.cpp" line="566"/>
+        <location filename="widget.cpp" line="558"/>
         <source>Help</source>
         <translation>Справка</translation>
     </message>
@@ -317,7 +317,7 @@ To boot back into the main program, wait or press button &quot;Restart&quot;.</s
     <message>
         <location filename="widget.ui" line="607"/>
         <source>OS Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Версия операционной системы:</translation>
     </message>
     <message>
         <location filename="widget.ui" line="613"/>
@@ -396,53 +396,53 @@ To boot back into the main program, wait or press button &quot;Restart&quot;.</s
         <translation>Скопировать</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="72"/>
-        <location filename="widget.cpp" line="545"/>
+        <location filename="widget.cpp" line="73"/>
+        <location filename="widget.cpp" line="537"/>
         <source>Rebooting after: %1 sec ...</source>
         <translation>Перезагрузка через: %1 сек ... </translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="110"/>
+        <location filename="widget.cpp" line="111"/>
         <source>Instructions for work with main application:</source>
         <translation>Действия с главной программой:</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="111"/>
+        <location filename="widget.cpp" line="112"/>
         <source>1. To back up the current version, press button &quot;Back up&quot;.
 </source>
         <translation>1. Для создания резервной копии нажмите кнопку &quot;Резерв. копия&quot;.
 </translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="112"/>
+        <location filename="widget.cpp" line="113"/>
         <source>2. To restore the current version from the backup, press button &quot;Restore&quot;.
 </source>
         <translation>2. Для восстановления из резервной копии нажмите кнопку &quot;Восстановить&quot;.
 </translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="114"/>
+        <location filename="widget.cpp" line="115"/>
         <source>3. To update main program make sure, that the USB flash drive must be formatted in FAT32 and files &quot;avikon31&quot; and &quot;md5sum&quot; should be in the root of the file system.
 </source>
         <translation>3. Для обновления главной программы проверьте, что USB флешка отформатирована в файловой системе FAT32 и файлы &quot;avicon31&quot; и &quot;md5sum&quot; находятся в корневом каталоге.
  </translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="115"/>
+        <location filename="widget.cpp" line="116"/>
         <source>3.1 Insert the USB flash drive if it is not already connected.
 </source>
         <translation>3.1 Вставьте USB флешку, если она все еще не вставлена.
 </translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="116"/>
+        <location filename="widget.cpp" line="117"/>
         <source>3.2 Press button &quot;Check updates&quot; to verify the new version without installing.
 </source>
         <translation>3.2 Нажмите кнопку &quot;Проверить обновления&quot; для проверки новой версии БЕЗ УСТАНОВКИ.
 </translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="117"/>
+        <location filename="widget.cpp" line="118"/>
         <source>3.3 Press button &quot;Update&quot; to update to the available on the USB flash drive version.
 </source>
         <oldsource>3.2 Press button &quot;Update&quot; to update to the available on the USB flash drive version.
@@ -451,385 +451,426 @@ To boot back into the main program, wait or press button &quot;Restart&quot;.</s
 </translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="123"/>
-        <location filename="widget.cpp" line="131"/>
         <source>===== ABORTED UPDATE!!! =====</source>
-        <translation>===== ОБНОВЛЕНИЕ ПРЕРВАНО!!! =====</translation>
+        <translation type="vanished">===== ОБНОВЛЕНИЕ ПРЕРВАНО!!! =====</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="124"/>
-        <location filename="widget.cpp" line="132"/>
+        <location filename="widget.cpp" line="125"/>
+        <location filename="widget.cpp" line="133"/>
         <source>Aborted!</source>
         <translation>Прервано!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="177"/>
+        <location filename="widget.cpp" line="179"/>
         <source>Application Avicon-31 not found!</source>
         <translation>Программа Авикон-31 не найдена!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="206"/>
-        <location filename="widget.cpp" line="246"/>
+        <location filename="widget.cpp" line="209"/>
+        <location filename="widget.cpp" line="249"/>
         <source>Can&apos;t create tmp directory!.</source>
         <translation>Временная директория не создана!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="232"/>
-        <location filename="widget.cpp" line="279"/>
-        <location filename="widget.cpp" line="416"/>
-        <location filename="widget.cpp" line="701"/>
-        <location filename="widget.cpp" line="746"/>
+        <location filename="widget.cpp" line="235"/>
+        <location filename="widget.cpp" line="282"/>
+        <location filename="widget.cpp" line="410"/>
+        <location filename="widget.cpp" line="693"/>
+        <location filename="widget.cpp" line="738"/>
         <source>Found.</source>
         <translation>Найдено.</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="237"/>
-        <location filename="widget.cpp" line="279"/>
-        <location filename="widget.cpp" line="709"/>
+        <location filename="widget.cpp" line="240"/>
+        <location filename="widget.cpp" line="282"/>
+        <location filename="widget.cpp" line="701"/>
         <source>NOT found!</source>
         <translation>Не найдено!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="285"/>
-        <location filename="widget.cpp" line="305"/>
+        <location filename="widget.cpp" line="288"/>
+        <location filename="widget.cpp" line="308"/>
         <source>Updating files ... </source>
         <translation>Обновление файлов ...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="299"/>
-        <location filename="widget.cpp" line="330"/>
-        <location filename="widget.cpp" line="466"/>
-        <location filename="widget.cpp" line="495"/>
-        <location filename="widget.cpp" line="520"/>
-        <location filename="widget.cpp" line="603"/>
-        <location filename="widget.cpp" line="643"/>
-        <location filename="widget.cpp" line="665"/>
+        <location filename="widget.cpp" line="302"/>
+        <location filename="widget.cpp" line="325"/>
+        <location filename="widget.cpp" line="458"/>
+        <location filename="widget.cpp" line="487"/>
+        <location filename="widget.cpp" line="512"/>
+        <location filename="widget.cpp" line="595"/>
+        <location filename="widget.cpp" line="635"/>
+        <location filename="widget.cpp" line="657"/>
         <source>Success.</source>
         <translation>Успешно.</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="299"/>
-        <location filename="widget.cpp" line="330"/>
-        <location filename="widget.cpp" line="469"/>
-        <location filename="widget.cpp" line="495"/>
-        <location filename="widget.cpp" line="520"/>
-        <location filename="widget.cpp" line="606"/>
-        <location filename="widget.cpp" line="646"/>
-        <location filename="widget.cpp" line="668"/>
+        <location filename="widget.cpp" line="302"/>
+        <location filename="widget.cpp" line="325"/>
+        <location filename="widget.cpp" line="461"/>
+        <location filename="widget.cpp" line="487"/>
+        <location filename="widget.cpp" line="512"/>
+        <location filename="widget.cpp" line="598"/>
+        <location filename="widget.cpp" line="638"/>
+        <location filename="widget.cpp" line="660"/>
         <source>Failure!</source>
         <translation>Ошибка!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="389"/>
+        <location filename="widget.cpp" line="383"/>
         <source>Checking USB flash ... </source>
         <translation>Проверка USB флешки ...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="416"/>
+        <location filename="widget.cpp" line="410"/>
         <source>NOT found! Check the connection or formatting.</source>
         <translation>НЕ найдено! Проверьте подключение или форматирование.</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="460"/>
+        <location filename="widget.cpp" line="452"/>
         <source>Deleting current backup ...</source>
         <translation>Удаление текущей резервной копии ...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="476"/>
-        <location filename="widget.cpp" line="693"/>
+        <location filename="widget.cpp" line="468"/>
+        <location filename="widget.cpp" line="685"/>
         <source>Creating backup ...</source>
         <translation>Создание резервной копии ...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="501"/>
+        <location filename="widget.cpp" line="493"/>
         <source>Restoring from backup ...</source>
         <translation>Восстановление из резервной копии ...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="528"/>
+        <location filename="widget.cpp" line="520"/>
         <source>Shutdown ...</source>
         <translation>Выключение ...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="536"/>
-        <location filename="widget.cpp" line="550"/>
+        <location filename="widget.cpp" line="528"/>
+        <location filename="widget.cpp" line="542"/>
         <source>Rebooting ...</source>
         <translation>Перезагрузка ...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="592"/>
-        <location filename="widget.cpp" line="634"/>
-        <location filename="widget.cpp" line="815"/>
-        <location filename="widget.cpp" line="838"/>
+        <location filename="widget.cpp" line="584"/>
+        <location filename="widget.cpp" line="626"/>
+        <location filename="widget.cpp" line="807"/>
+        <location filename="widget.cpp" line="830"/>
         <source>Searching updates ...</source>
         <translation>Поиск обновлений ...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="599"/>
-        <location filename="widget.cpp" line="638"/>
+        <location filename="widget.cpp" line="591"/>
+        <location filename="widget.cpp" line="630"/>
         <source>Checking FIRMWARE integrity ...</source>
         <translation>Проверка целостности прошивки ...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="609"/>
-        <location filename="widget.cpp" line="651"/>
-        <location filename="widget.cpp" line="671"/>
+        <location filename="widget.cpp" line="601"/>
+        <location filename="widget.cpp" line="643"/>
+        <location filename="widget.cpp" line="663"/>
         <source>Failure! File &quot;md5sum&quot; not found!</source>
         <translation>Ошибка! Файл &quot;md5sum&quot; не найден!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="623"/>
-        <location filename="widget.cpp" line="828"/>
+        <location filename="widget.cpp" line="615"/>
+        <location filename="widget.cpp" line="820"/>
         <source>Updating ...</source>
         <translation>Обновление ...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="624"/>
-        <location filename="widget.cpp" line="829"/>
         <source>===== START UPDATE =====</source>
-        <translation>===== ОБНОВЛЕНИЕ НАЧАЛОСЬ =====</translation>
+        <translation type="vanished">===== ОБНОВЛЕНИЕ НАЧАЛОСЬ =====</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="661"/>
+        <location filename="widget.cpp" line="653"/>
         <source>Checking FIRMWARE integrity after update ... </source>
         <translation>Проверка целостности прошивки после обновления ...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="681"/>
-        <location filename="widget.cpp" line="853"/>
         <source>===== FINISH UPDATE =====</source>
-        <translation>===== ОБНОВЛЕНИЕ ЗАВЕРШЕНО =====</translation>
+        <translation type="vanished">===== ОБНОВЛЕНИЕ ЗАВЕРШЕНО =====</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="683"/>
-        <location filename="widget.cpp" line="855"/>
+        <location filename="widget.cpp" line="675"/>
+        <location filename="widget.cpp" line="847"/>
         <source>Updated.</source>
         <translation>Обновлено.</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="694"/>
         <source>===== START CREATING BACKUP =====</source>
-        <translation>===== СОЗДАНИЕ РЕЗЕРВНОЙ КОПИИ НАЧАЛОСЬ =====</translation>
+        <translation type="vanished">===== СОЗДАНИЕ РЕЗЕРВНОЙ КОПИИ НАЧАЛОСЬ =====</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="697"/>
+        <location filename="widget.cpp" line="689"/>
         <source>Searching current backup ...</source>
         <translation>Поиск текущей резервной копии ... </translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="703"/>
-        <location filename="widget.cpp" line="714"/>
         <source>===== ABORTED CREATING BACKUP!!! =====</source>
-        <translation>===== СОЗДАНИЕ РЕЗЕРВНОЙ КОПИИ ПРЕРВАНО!!! =====</translation>
+        <translation type="vanished">===== СОЗДАНИЕ РЕЗЕРВНОЙ КОПИИ ПРЕРВАНО!!! =====</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="725"/>
         <source>===== FINISH CREATING BACKUP =====</source>
-        <translation>===== СОЗДАНИЕ РЕЗЕРВНОЙ КОПИИ ЗАВЕРШЕНО =====</translation>
+        <translation type="vanished">===== СОЗДАНИЕ РЕЗЕРВНОЙ КОПИИ ЗАВЕРШЕНО =====</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="727"/>
+        <location filename="widget.cpp" line="719"/>
         <source>Backup was created.</source>
         <translation>Резервная копия создана.</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="737"/>
+        <location filename="widget.cpp" line="729"/>
         <source>Restoring ...</source>
         <translation>Восстановление ...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="738"/>
         <source>===== START RESTORING =====</source>
-        <translation>===== ВОССТАНОВЛЕНИЕ НАЧАЛОСЬ =====</translation>
+        <translation type="vanished">===== ВОССТАНОВЛЕНИЕ НАЧАЛОСЬ =====</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="741"/>
+        <location filename="widget.cpp" line="733"/>
         <source>Checking BACKUP file ...</source>
         <translation>Проверка файла резервной копии ... </translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="749"/>
+        <location filename="widget.cpp" line="741"/>
         <source>Not found.</source>
         <translation>Не найдено.</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="750"/>
-        <location filename="widget.cpp" line="760"/>
         <source>===== ABORTED RESTORING!!! =====</source>
-        <translation>===== ВОССТАНОВЛЕНИЕ ПРЕРВАНО!!! =====</translation>
+        <translation type="vanished">===== ВОССТАНОВЛЕНИЕ ПРЕРВАНО!!! =====</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="770"/>
         <source>===== FINISH RESTORING =====</source>
-        <translation>===== ВОССТАНОВЛЕНИЕ ЗАВЕРШЕНО =====</translation>
+        <translation type="vanished">===== ВОССТАНОВЛЕНИЕ ЗАВЕРШЕНО =====</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="772"/>
+        <location filename="widget.cpp" line="124"/>
+        <location filename="widget.cpp" line="132"/>
+        <source>=== ABORTED UPDATE!!! ===</source>
+        <translation>=== ОБНОВЛЕНИЕ ПРЕРВАНО!!! ===</translation>
+    </message>
+    <message>
+        <location filename="widget.cpp" line="616"/>
+        <location filename="widget.cpp" line="821"/>
+        <source>=== START UPDATE ===</source>
+        <translation>=== ОБНОВЛЕНИЕ НАЧАЛОСЬ ===</translation>
+    </message>
+    <message>
+        <location filename="widget.cpp" line="673"/>
+        <location filename="widget.cpp" line="845"/>
+        <source>=== FINISH UPDATE ===</source>
+        <translation>=== ОБНОВЛЕНИЕ ЗАВЕРШЕНО ===</translation>
+    </message>
+    <message>
+        <location filename="widget.cpp" line="686"/>
+        <source>=== START CREATING BACKUP ===</source>
+        <translation>=== СОЗДАНИЕ РЕЗЕРВНОЙ КОПИИ НАЧАЛОСЬ ===</translation>
+    </message>
+    <message>
+        <location filename="widget.cpp" line="695"/>
+        <location filename="widget.cpp" line="706"/>
+        <source>=== ABORTED CREATING BACKUP!!! ===</source>
+        <translation>=== СОЗДАНИЕ РЕЗЕРВНОЙ КОПИИ ПРЕРВАНО!!! ===</translation>
+    </message>
+    <message>
+        <location filename="widget.cpp" line="717"/>
+        <source>=== FINISH CREATING BACKUP ===</source>
+        <translation>=== СОЗДАНИЕ РЕЗЕРВНОЙ КОПИИ ЗАВЕРШЕНО ===</translation>
+    </message>
+    <message>
+        <location filename="widget.cpp" line="730"/>
+        <source>=== START RESTORING ===</source>
+        <translation>=== ВОССТАНОВЛЕНИЕ НАЧАЛОСЬ ===</translation>
+    </message>
+    <message>
+        <location filename="widget.cpp" line="742"/>
+        <location filename="widget.cpp" line="752"/>
+        <source>=== ABORTED RESTORING!!! ===</source>
+        <translation>=== ВОССТАНОВЛЕНИЕ ПРЕРВАНО!!! ===</translation>
+    </message>
+    <message>
+        <location filename="widget.cpp" line="762"/>
+        <source>=== FINISH RESTORING ===</source>
+        <translation>=== ВОССТАНОВЛЕНИЕ ЗАВЕРШЕНО ===</translation>
+    </message>
+    <message>
+        <location filename="widget.cpp" line="764"/>
         <source>Restored.</source>
         <translation>Восстановлено.</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="903"/>
+        <location filename="widget.cpp" line="895"/>
         <source>Copying files ...</source>
         <translation>Копирование файлов ...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="914"/>
+        <location filename="widget.cpp" line="906"/>
         <source>Copied.</source>
         <translation>Скопировано.</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="921"/>
+        <location filename="widget.cpp" line="913"/>
         <source>UMU update in progress...</source>
         <translation>Обновление прошивки БУМ...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="928"/>
-        <location filename="widget.cpp" line="1107"/>
+        <location filename="widget.cpp" line="920"/>
+        <location filename="widget.cpp" line="1099"/>
         <source>UMU power disabled...</source>
         <translation>Питание БУМ отключено...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="942"/>
-        <location filename="widget.cpp" line="1113"/>
+        <location filename="widget.cpp" line="934"/>
+        <location filename="widget.cpp" line="1105"/>
         <source>UMU power enabled...</source>
         <translation>Питание БУМ включено...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1043"/>
+        <location filename="widget.cpp" line="1035"/>
         <source>Searching for USB device ...</source>
         <translation>Поиск USB устройств...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1045"/>
+        <location filename="widget.cpp" line="1037"/>
         <source>USB device not found ...</source>
         <translation>USB устройство не найдено ...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1048"/>
+        <location filename="widget.cpp" line="1040"/>
         <source>USB device not found!</source>
         <translation>USB устройство не найдено!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1058"/>
+        <location filename="widget.cpp" line="1050"/>
         <source>Searching firmware ...</source>
         <translation>Поиск прошивки...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1083"/>
+        <location filename="widget.cpp" line="1075"/>
         <source>File </source>
         <translation>Файл </translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1083"/>
+        <location filename="widget.cpp" line="1075"/>
         <source> found</source>
         <translation> найден</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1090"/>
+        <location filename="widget.cpp" line="1082"/>
         <source>Ready for update!
 </source>
         <translation>Готово к обновлению!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1091"/>
+        <location filename="widget.cpp" line="1083"/>
         <source>UMU firmware found! Ready for update!</source>
         <translation>Прошивка БУМ найдена, прибор готов к обновлению!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1103"/>
+        <location filename="widget.cpp" line="1095"/>
         <source>Upload finished, rebooting...</source>
         <translation>Загрузка завершена, пререзагрузка...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1116"/>
+        <location filename="widget.cpp" line="1108"/>
         <source>Please wait...</source>
         <translation>Пожалуйста подождите...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1125"/>
-        <location filename="widget.cpp" line="1249"/>
-        <location filename="widget.cpp" line="1314"/>
+        <location filename="widget.cpp" line="1117"/>
+        <location filename="widget.cpp" line="1241"/>
+        <location filename="widget.cpp" line="1311"/>
         <source>Finished!</source>
         <translation>Завершено!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1128"/>
+        <location filename="widget.cpp" line="1120"/>
         <source>UMU firmware updated successfully!</source>
         <translation>Прошивка БУМ обновлена успешно!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1139"/>
+        <location filename="widget.cpp" line="1131"/>
         <source>Searching for settings...</source>
         <translation>Поиск настроек...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1147"/>
+        <location filename="widget.cpp" line="1139"/>
         <source>USB drive not found!</source>
         <translation>USB накопитель не найден!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1154"/>
+        <location filename="widget.cpp" line="1146"/>
         <source>USB drive found!</source>
         <translation>USB накопитель найден!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1170"/>
+        <location filename="widget.cpp" line="1162"/>
         <source>Settings found!</source>
         <translation>Настройки найдены!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1174"/>
+        <location filename="widget.cpp" line="1166"/>
         <source>Backup not found!</source>
         <translation>Настройки не найдены!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1191"/>
+        <location filename="widget.cpp" line="1183"/>
         <source>Saving backup...</source>
         <translation>Сохранение настроек...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1223"/>
+        <location filename="widget.cpp" line="1215"/>
         <source>Settings packed!</source>
         <translation>Настройки запакованы!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1226"/>
+        <location filename="widget.cpp" line="1218"/>
         <source>Error! Cannot pack settings!</source>
         <translation>Ошибка! Невозможно запаковать настройки!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1241"/>
+        <location filename="widget.cpp" line="1233"/>
         <source>Backup saved!</source>
         <translation>Настройки сохранены!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1244"/>
+        <location filename="widget.cpp" line="1236"/>
         <source>Error! Backup not saved!</source>
         <translation>Ошибка! невозможно сохранить настройки!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1262"/>
+        <location filename="widget.cpp" line="1254"/>
         <source>Restoring settings...</source>
         <translation>Восстановление настроек...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1277"/>
+        <location filename="widget.cpp" line="1267"/>
+        <source>Error! Settings not found!</source>
+        <translation>Ошибка! Настройки не найдены!</translation>
+    </message>
+    <message>
+        <location filename="widget.cpp" line="1274"/>
         <source>Unpacking settings...</source>
         <translation>Распаковка настроек...</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1284"/>
+        <location filename="widget.cpp" line="1281"/>
         <source>Settings unpacked!</source>
         <translation>Настройки распакованы!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1287"/>
+        <location filename="widget.cpp" line="1284"/>
         <source>Error! Cannot unpack settings!</source>
         <translation>Ошибка! невозможно распаковать настройки!</translation>
     </message>
     <message>
-        <location filename="widget.cpp" line="1312"/>
+        <location filename="widget.cpp" line="1309"/>
         <source>Settings restored!</source>
         <translation>Настройки восстановлены!</translation>
     </message>
